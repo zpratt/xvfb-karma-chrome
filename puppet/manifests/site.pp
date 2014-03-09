@@ -19,7 +19,8 @@ package { 'xorg-x11-server-Xvfb':
 package { 'wget':
   ensure => present
 }
-package { 'vim':
-  ensure => present
-}
 
+service { 'xvfbd':
+  ensure => running,
+  enable => true
+}
